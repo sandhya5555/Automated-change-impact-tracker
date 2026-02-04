@@ -138,7 +138,7 @@ export class Change_detector_new {
         
         // --- FIXED: Use 'new Date()' to satisfy the Ontology ---
         // 'as any' is still needed to bypass strict SDK types, but passing a real Date object fixes the runtime error.
-        newAlert.timestamp = new Date(current.timestamp) as any; 
+        // newAlert.timestamp = new Date(current.timestamp) as any; 
 
         console.log(`Generated Impact Alert ${alertId} for ${current.objectTypeName}`);
     }
@@ -169,7 +169,6 @@ export class Change_detector_new {
         }
     }
 
-    // --- HELPER METHODS ---
 
     private extractSchemaFromObjects(objects: readonly any[], sampleObject?: any, expectedSchema?: string[], objectTypeName?: string): string[] {
         if (expectedSchema && expectedSchema.length > 0) return expectedSchema;

@@ -1,0 +1,48 @@
+LOG [2026-02-04T06:30:18.438Z] Change detected for TreatmentTypes. Analyzing impact...
+ERROR [2026-02-04T06:30:18.481Z] Error processing TreatmentTypes: { name: 'SafeError',
+  args: 
+   [ { type: 'SAFE',
+       name: 'expectedDataType',
+       value: '{"type":"timestamp"}' },
+     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
+     { type: 'UNSAFE',
+       name: 'providedValue',
+       value: '2026-02-04T06:30:17.896Z' } ],
+  type: 'UserCausedError',
+  errorInstanceId: 'bbd1d96a-4522-4e2b-80cc-e30182e0ce6b',
+  parameters: 
+   { expectedDataType: '{"type":"timestamp"}',
+     propertyId: 'timestamp',
+     providedValue: '2026-02-04T06:30:17.896Z' },
+  result: 
+   { runtimeError: 
+      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
+        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/2e6de189-a200-4cbd-87dc-e6a14d57da32/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
+        parameters: '[Circular]' },
+     type: 'runtimeError' } }
+LOG [2026-02-04T06:30:18.772Z] No change for Patients.
+LOG [2026-02-04T06:30:19.046Z] No change for Surgeries.
+LOG [2026-02-04T06:30:19.271Z] No change for Treatments.
+LOG [2026-02-04T06:30:19.606Z] No change for PatientsSurgeries.
+LOG [2026-02-04T06:30:19.874Z] Change detected for TreatmentTypesCleaned. Analyzing impact...
+ERROR [2026-02-04T06:30:19.878Z] Error processing TreatmentTypesCleaned: { name: 'SafeError',
+  args: 
+   [ { type: 'SAFE',
+       name: 'expectedDataType',
+       value: '{"type":"timestamp"}' },
+     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
+     { type: 'UNSAFE',
+       name: 'providedValue',
+       value: '2026-02-04T06:30:17.896Z' } ],
+  type: 'UserCausedError',
+  errorInstanceId: 'abb14d1c-3b0b-4730-981c-19603940ce4c',
+  parameters: 
+   { expectedDataType: '{"type":"timestamp"}',
+     propertyId: 'timestamp',
+     providedValue: '2026-02-04T06:30:17.896Z' },
+  result: 
+   { runtimeError: 
+      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
+        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/2e6de189-a200-4cbd-87dc-e6a14d57da32/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
+        parameters: '[Circular]' },
+     type: 'runtimeError' } }

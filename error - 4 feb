@@ -1,5 +1,5 @@
-LOG [2026-02-04T08:56:31.176Z] Staged snapshot for TreatmentTypes
-LOG [2026-02-04T08:56:31.178Z] Change detection result for TreatmentTypes: { objectTypeName: 'TreatmentTypes',
+LOG [2026-02-04T09:16:49.990Z] Staged snapshot for TreatmentTypes
+LOG [2026-02-04T09:16:49.999Z] Change detection result for TreatmentTypes: { objectTypeName: 'TreatmentTypes',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'TreatmentTypes',
@@ -9,7 +9,7 @@ LOG [2026-02-04T08:56:31.178Z] Change detection result for TreatmentTypes: { obj
         'treatment_name',
         'treatment_type_id' ],
      rowCount: 36,
-     timestamp: '2026-02-04T08:56:30.975Z',
+     timestamp: '2026-02-04T09:16:49.700Z',
      hash: '{"schema":["implant_type","surgical_method","treatment_name","treatment_type_id"],"rowCount":36}' },
   previousSnapshot: 
    { objectTypeName: 'TreatmentTypes',
@@ -25,30 +25,10 @@ LOG [2026-02-04T08:56:31.178Z] Change detection result for TreatmentTypes: { obj
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T08:56:31.178Z] Creating Alert for TreatmentTypes. Impacted: Treatments,TreatmentTypesCleaned
-ERROR [2026-02-04T08:56:31.186Z] Error processing TreatmentTypes: { name: 'SafeError',
-  args: 
-   [ { type: 'SAFE',
-       name: 'expectedDataType',
-       value: '{"type":"timestamp"}' },
-     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
-     { type: 'UNSAFE',
-       name: 'providedValue',
-       value: '"2026-02-04T08:56:30.975Z"' } ],
-  type: 'UserCausedError',
-  errorInstanceId: 'f77a305b-1741-4b36-b1a5-05d595a12a29',
-  parameters: 
-   { expectedDataType: '{"type":"timestamp"}',
-     propertyId: 'timestamp',
-     providedValue: '"2026-02-04T08:56:30.975Z"' },
-  result: 
-   { runtimeError: 
-      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
-        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/e4cc03b6-bbaa-4d5d-8e0f-4433d4656402/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
-        parameters: '[Circular]' },
-     type: 'runtimeError' } }
-LOG [2026-02-04T08:56:31.318Z] Staged snapshot for Patients
-LOG [2026-02-04T08:56:31.319Z] Change detection result for Patients: { objectTypeName: 'Patients',
+LOG [2026-02-04T09:16:49.999Z] Creating Alert for TreatmentTypes. Impacted: Treatments,TreatmentTypesCleaned
+LOG [2026-02-04T09:16:50.007Z] Generated Impact Alert ALERT-1770196610005-5o75l for TreatmentTypes
+LOG [2026-02-04T09:16:50.174Z] Staged snapshot for Patients
+LOG [2026-02-04T09:16:50.174Z] Change detection result for Patients: { objectTypeName: 'Patients',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'Patients',
@@ -59,7 +39,7 @@ LOG [2026-02-04T08:56:31.319Z] Change detection result for Patients: { objectTyp
         'obfuscated_patient_name',
         'patient_id' ],
      rowCount: 50,
-     timestamp: '2026-02-04T08:56:30.975Z',
+     timestamp: '2026-02-04T09:16:49.700Z',
      hash: '{"schema":["age_group","comorbidities","condition","obfuscated_patient_name","patient_id"],"rowCount":50}' },
   previousSnapshot: 
    { objectTypeName: 'Patients',
@@ -76,30 +56,10 @@ LOG [2026-02-04T08:56:31.319Z] Change detection result for Patients: { objectTyp
         'patient_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T08:56:31.319Z] Creating Alert for Patients. Impacted: PatientsSurgeries
-ERROR [2026-02-04T08:56:31.321Z] Error processing Patients: { name: 'SafeError',
-  args: 
-   [ { type: 'SAFE',
-       name: 'expectedDataType',
-       value: '{"type":"timestamp"}' },
-     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
-     { type: 'UNSAFE',
-       name: 'providedValue',
-       value: '"2026-02-04T08:56:30.975Z"' } ],
-  type: 'UserCausedError',
-  errorInstanceId: 'd0b96215-89db-40ad-beec-06c711918ee2',
-  parameters: 
-   { expectedDataType: '{"type":"timestamp"}',
-     propertyId: 'timestamp',
-     providedValue: '"2026-02-04T08:56:30.975Z"' },
-  result: 
-   { runtimeError: 
-      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
-        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/e4cc03b6-bbaa-4d5d-8e0f-4433d4656402/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
-        parameters: '[Circular]' },
-     type: 'runtimeError' } }
-LOG [2026-02-04T08:56:31.489Z] Staged snapshot for Surgeries
-LOG [2026-02-04T08:56:31.490Z] Change detection result for Surgeries: { objectTypeName: 'Surgeries',
+LOG [2026-02-04T09:16:50.175Z] Creating Alert for Patients. Impacted: PatientsSurgeries
+LOG [2026-02-04T09:16:50.176Z] Generated Impact Alert ALERT-1770196610176-551i4 for Patients
+LOG [2026-02-04T09:16:50.381Z] Staged snapshot for Surgeries
+LOG [2026-02-04T09:16:50.382Z] Change detection result for Surgeries: { objectTypeName: 'Surgeries',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'Surgeries',
@@ -110,7 +70,7 @@ LOG [2026-02-04T08:56:31.490Z] Change detection result for Surgeries: { objectTy
         'surgery_name',
         'treatment_type_id' ],
      rowCount: 71,
-     timestamp: '2026-02-04T08:56:30.975Z',
+     timestamp: '2026-02-04T09:16:49.700Z',
      hash: '{"schema":["date","patient_id","surgery_id","surgery_name","treatment_type_id"],"rowCount":71}' },
   previousSnapshot: 
    { objectTypeName: 'Surgeries',
@@ -127,30 +87,10 @@ LOG [2026-02-04T08:56:31.490Z] Change detection result for Surgeries: { objectTy
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T08:56:31.490Z] Creating Alert for Surgeries. Impacted: PatientsSurgeries,Treatments,TreatmentTypesCleaned
-ERROR [2026-02-04T08:56:31.493Z] Error processing Surgeries: { name: 'SafeError',
-  args: 
-   [ { type: 'SAFE',
-       name: 'expectedDataType',
-       value: '{"type":"timestamp"}' },
-     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
-     { type: 'UNSAFE',
-       name: 'providedValue',
-       value: '"2026-02-04T08:56:30.975Z"' } ],
-  type: 'UserCausedError',
-  errorInstanceId: 'b00f22c2-d9fb-4314-8495-db14e8644374',
-  parameters: 
-   { expectedDataType: '{"type":"timestamp"}',
-     propertyId: 'timestamp',
-     providedValue: '"2026-02-04T08:56:30.975Z"' },
-  result: 
-   { runtimeError: 
-      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
-        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/e4cc03b6-bbaa-4d5d-8e0f-4433d4656402/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
-        parameters: '[Circular]' },
-     type: 'runtimeError' } }
-LOG [2026-02-04T08:56:31.623Z] Staged snapshot for Treatments
-LOG [2026-02-04T08:56:31.623Z] Change detection result for Treatments: { objectTypeName: 'Treatments',
+LOG [2026-02-04T09:16:50.382Z] Creating Alert for Surgeries. Impacted: PatientsSurgeries,Treatments,TreatmentTypesCleaned
+LOG [2026-02-04T09:16:50.382Z] Generated Impact Alert ALERT-1770196610382-amxet for Surgeries
+LOG [2026-02-04T09:16:50.575Z] Staged snapshot for Treatments
+LOG [2026-02-04T09:16:50.581Z] Change detection result for Treatments: { objectTypeName: 'Treatments',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'Treatments',
@@ -161,7 +101,7 @@ LOG [2026-02-04T08:56:31.623Z] Change detection result for Treatments: { objectT
         'treatment_name',
         'treatment_type_id' ],
      rowCount: 50,
-     timestamp: '2026-02-04T08:56:30.975Z',
+     timestamp: '2026-02-04T09:16:49.700Z',
      hash: '{"schema":["implant_type","surgery_name","surgical_method","treatment_name","treatment_type_id"],"rowCount":50}' },
   previousSnapshot: 
    { objectTypeName: 'Treatments',
@@ -178,30 +118,10 @@ LOG [2026-02-04T08:56:31.623Z] Change detection result for Treatments: { objectT
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T08:56:31.623Z] Creating Alert for Treatments. Impacted: 
-ERROR [2026-02-04T08:56:31.624Z] Error processing Treatments: { name: 'SafeError',
-  args: 
-   [ { type: 'SAFE',
-       name: 'expectedDataType',
-       value: '{"type":"timestamp"}' },
-     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
-     { type: 'UNSAFE',
-       name: 'providedValue',
-       value: '"2026-02-04T08:56:30.975Z"' } ],
-  type: 'UserCausedError',
-  errorInstanceId: '8a20f7c9-6ad3-49e4-b251-3ef429673e84',
-  parameters: 
-   { expectedDataType: '{"type":"timestamp"}',
-     propertyId: 'timestamp',
-     providedValue: '"2026-02-04T08:56:30.975Z"' },
-  result: 
-   { runtimeError: 
-      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
-        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/e4cc03b6-bbaa-4d5d-8e0f-4433d4656402/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
-        parameters: '[Circular]' },
-     type: 'runtimeError' } }
-LOG [2026-02-04T08:56:31.742Z] Staged snapshot for PatientsSurgeries
-LOG [2026-02-04T08:56:31.742Z] Change detection result for PatientsSurgeries: { objectTypeName: 'PatientsSurgeries',
+LOG [2026-02-04T09:16:50.581Z] Creating Alert for Treatments. Impacted: 
+LOG [2026-02-04T09:16:50.582Z] Generated Impact Alert ALERT-1770196610581-zebwf for Treatments
+LOG [2026-02-04T09:16:50.777Z] Staged snapshot for PatientsSurgeries
+LOG [2026-02-04T09:16:50.777Z] Change detection result for PatientsSurgeries: { objectTypeName: 'PatientsSurgeries',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'PatientsSurgeries',
@@ -218,7 +138,7 @@ LOG [2026-02-04T08:56:31.742Z] Change detection result for PatientsSurgeries: { 
         'surgery_name',
         'treatment_type_id' ],
      rowCount: 82,
-     timestamp: '2026-02-04T08:56:30.975Z',
+     timestamp: '2026-02-04T09:16:49.700Z',
      hash: '{"schema":["age_group","comorbidities","condition","date","obfuscated_patient_name","patient_id","primary_key","surgery_date","surgery_id","surgery_name","treatment_type_id"],"rowCount":82}' },
   previousSnapshot: 
    { objectTypeName: 'PatientsSurgeries',
@@ -241,30 +161,10 @@ LOG [2026-02-04T08:56:31.742Z] Change detection result for PatientsSurgeries: { 
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T08:56:31.743Z] Creating Alert for PatientsSurgeries. Impacted: 
-ERROR [2026-02-04T08:56:31.743Z] Error processing PatientsSurgeries: { name: 'SafeError',
-  args: 
-   [ { type: 'SAFE',
-       name: 'expectedDataType',
-       value: '{"type":"timestamp"}' },
-     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
-     { type: 'UNSAFE',
-       name: 'providedValue',
-       value: '"2026-02-04T08:56:30.975Z"' } ],
-  type: 'UserCausedError',
-  errorInstanceId: 'f2a15a53-13e5-45dd-b338-71f7a1856efa',
-  parameters: 
-   { expectedDataType: '{"type":"timestamp"}',
-     propertyId: 'timestamp',
-     providedValue: '"2026-02-04T08:56:30.975Z"' },
-  result: 
-   { runtimeError: 
-      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
-        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/e4cc03b6-bbaa-4d5d-8e0f-4433d4656402/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
-        parameters: '[Circular]' },
-     type: 'runtimeError' } }
-LOG [2026-02-04T08:56:31.854Z] Staged snapshot for TreatmentTypesCleaned
-LOG [2026-02-04T08:56:31.855Z] Change detection result for TreatmentTypesCleaned: { objectTypeName: 'TreatmentTypesCleaned',
+LOG [2026-02-04T09:16:50.778Z] Creating Alert for PatientsSurgeries. Impacted: 
+LOG [2026-02-04T09:16:50.778Z] Generated Impact Alert ALERT-1770196610778-l4v9q for PatientsSurgeries
+LOG [2026-02-04T09:16:50.972Z] Staged snapshot for TreatmentTypesCleaned
+LOG [2026-02-04T09:16:50.973Z] Change detection result for TreatmentTypesCleaned: { objectTypeName: 'TreatmentTypesCleaned',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'TreatmentTypesCleaned',
@@ -276,7 +176,7 @@ LOG [2026-02-04T08:56:31.855Z] Change detection result for TreatmentTypesCleaned
         'treatment_name',
         'treatment_type_id' ],
      rowCount: 36,
-     timestamp: '2026-02-04T08:56:30.975Z',
+     timestamp: '2026-02-04T09:16:49.700Z',
      hash: '{"schema":["date","implant_type","surgery_name","surgical_method","treatment_name","treatment_type_id"],"rowCount":36}' },
   previousSnapshot: 
    { objectTypeName: 'TreatmentTypesCleaned',
@@ -294,25 +194,5 @@ LOG [2026-02-04T08:56:31.855Z] Change detection result for TreatmentTypesCleaned
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T08:56:31.855Z] Creating Alert for TreatmentTypesCleaned. Impacted: Treatments
-ERROR [2026-02-04T08:56:31.856Z] Error processing TreatmentTypesCleaned: { name: 'SafeError',
-  args: 
-   [ { type: 'SAFE',
-       name: 'expectedDataType',
-       value: '{"type":"timestamp"}' },
-     { type: 'UNSAFE', name: 'propertyId', value: 'timestamp' },
-     { type: 'UNSAFE',
-       name: 'providedValue',
-       value: '"2026-02-04T08:56:30.975Z"' } ],
-  type: 'UserCausedError',
-  errorInstanceId: 'cfe0318b-a8b6-4dd6-bf07-52c297750cdf',
-  parameters: 
-   { expectedDataType: '{"type":"timestamp"}',
-     propertyId: 'timestamp',
-     providedValue: '"2026-02-04T08:56:30.975Z"' },
-  result: 
-   { runtimeError: 
-      { message: 'The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.',
-        stacktrace: 'SafeError: The provided value for the property does not match the expected data type. Please ensure that your code is setting the correct value. If using numeric types, please make sure there is no division by 0 and that the results are finite.\n    at t [as constructor] (FunctionsIsolateRuntimePackage:2:1538410)\n    at new t (FunctionsIsolateRuntimePackage:2:584231)\n    at t.propertyTypeAndProvidedValueMismatch (FunctionsIsolateRuntimePackage:2:1244707)\n    at _.convertToPhonographTypeV2 (FunctionsIsolateRuntimePackage:2:1224988)\n    at t.TypeConvertingPropertyStore.convertToPhonographType (FunctionsIsolateRuntimePackage:2:1349267)\n    at t.TypeConvertingPropertyStore.set (FunctionsIsolateRuntimePackage:2:1349027)\n    at t.DefaultObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1362837)\n    at t.MetricRecordingObjectStorageProvider.setPropertyValue (FunctionsIsolateRuntimePackage:2:1286756)\n    at Proxy.setPropertyValue (FunctionsIsolateRuntimePackage:2:1289327)\n    at set timestamp (/scratch/standalone/e4cc03b6-bbaa-4d5d-8e0f-4433d4656402/code-assist/contents/functions-typescript/dist/OntologyObjectFactory.bundle.js:22834:18)',
-        parameters: '[Circular]' },
-     type: 'runtimeError' } }
+LOG [2026-02-04T09:16:50.973Z] Creating Alert for TreatmentTypesCleaned. Impacted: Treatments
+LOG [2026-02-04T09:16:50.973Z] Generated Impact Alert ALERT-1770196610973-nj3zk for TreatmentTypesCleaned

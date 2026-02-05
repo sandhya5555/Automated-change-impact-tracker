@@ -1,5 +1,5 @@
-LOG [2026-02-04T10:22:11.875Z] Staged snapshot for TreatmentTypes
-LOG [2026-02-04T10:22:11.878Z] Change detection result for TreatmentTypes: { objectTypeName: 'TreatmentTypes',
+LOG [2026-02-05T08:15:57.422Z] Staged snapshot for TreatmentTypes
+LOG [2026-02-05T08:15:57.425Z] Change detection result for TreatmentTypes: { objectTypeName: 'TreatmentTypes',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'TreatmentTypes',
@@ -9,7 +9,7 @@ LOG [2026-02-04T10:22:11.878Z] Change detection result for TreatmentTypes: { obj
         'treatment_name',
         'treatment_type_id' ],
      rowCount: 36,
-     timestamp: '2026-02-04T10:22:11.613Z',
+     timestamp: '2026-02-05T08:15:57.061Z',
      hash: '{"schema":["implant_type","surgical_method","treatment_name","treatment_type_id"],"rowCount":36}' },
   previousSnapshot: 
    { objectTypeName: 'TreatmentTypes',
@@ -25,10 +25,10 @@ LOG [2026-02-04T10:22:11.878Z] Change detection result for TreatmentTypes: { obj
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T10:22:11.878Z] Creating Alert for TreatmentTypes. Impacted: Treatments,TreatmentTypesCleaned
-LOG [2026-02-04T10:22:11.880Z] Generated Impact Alert ALERT-1770200531878-b9arb for TreatmentTypes
-LOG [2026-02-04T10:22:12.074Z] Staged snapshot for Patients
-LOG [2026-02-04T10:22:12.075Z] Change detection result for Patients: { objectTypeName: 'Patients',
+LOG [2026-02-05T08:15:57.425Z] Creating Alert for TreatmentTypes. Impacted: Treatments,TreatmentTypesCleaned
+LOG [2026-02-05T08:15:57.427Z] Generated Impact Alert ALERT-1770279357426-qkbxi for TreatmentTypes
+LOG [2026-02-05T08:15:57.613Z] Staged snapshot for Patients
+LOG [2026-02-05T08:15:57.613Z] Change detection result for Patients: { objectTypeName: 'Patients',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'Patients',
@@ -39,7 +39,7 @@ LOG [2026-02-04T10:22:12.075Z] Change detection result for Patients: { objectTyp
         'obfuscated_patient_name',
         'patient_id' ],
      rowCount: 50,
-     timestamp: '2026-02-04T10:22:11.613Z',
+     timestamp: '2026-02-05T08:15:57.061Z',
      hash: '{"schema":["age_group","comorbidities","condition","obfuscated_patient_name","patient_id"],"rowCount":50}' },
   previousSnapshot: 
    { objectTypeName: 'Patients',
@@ -56,10 +56,10 @@ LOG [2026-02-04T10:22:12.075Z] Change detection result for Patients: { objectTyp
         'patient_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T10:22:12.075Z] Creating Alert for Patients. Impacted: PatientsSurgeries
-LOG [2026-02-04T10:22:12.077Z] Generated Impact Alert ALERT-1770200532075-sxs59 for Patients
-LOG [2026-02-04T10:22:12.269Z] Staged snapshot for Surgeries
-LOG [2026-02-04T10:22:12.270Z] Change detection result for Surgeries: { objectTypeName: 'Surgeries',
+LOG [2026-02-05T08:15:57.613Z] Creating Alert for Patients. Impacted: PatientsSurgeries
+LOG [2026-02-05T08:15:57.614Z] Generated Impact Alert ALERT-1770279357613-p5q8x for Patients
+LOG [2026-02-05T08:15:57.813Z] Staged snapshot for Surgeries
+LOG [2026-02-05T08:15:57.813Z] Change detection result for Surgeries: { objectTypeName: 'Surgeries',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'Surgeries',
@@ -70,7 +70,7 @@ LOG [2026-02-04T10:22:12.270Z] Change detection result for Surgeries: { objectTy
         'surgery_name',
         'treatment_type_id' ],
      rowCount: 71,
-     timestamp: '2026-02-04T10:22:11.613Z',
+     timestamp: '2026-02-05T08:15:57.061Z',
      hash: '{"schema":["date","patient_id","surgery_id","surgery_name","treatment_type_id"],"rowCount":71}' },
   previousSnapshot: 
    { objectTypeName: 'Surgeries',
@@ -87,10 +87,10 @@ LOG [2026-02-04T10:22:12.270Z] Change detection result for Surgeries: { objectTy
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T10:22:12.270Z] Creating Alert for Surgeries. Impacted: PatientsSurgeries,Treatments,TreatmentTypesCleaned
-LOG [2026-02-04T10:22:12.270Z] Generated Impact Alert ALERT-1770200532270-f73gg for Surgeries
-LOG [2026-02-04T10:22:12.467Z] Staged snapshot for Treatments
-LOG [2026-02-04T10:22:12.467Z] Change detection result for Treatments: { objectTypeName: 'Treatments',
+LOG [2026-02-05T08:15:57.813Z] Creating Alert for Surgeries. Impacted: PatientsSurgeries,Treatments,TreatmentTypesCleaned
+LOG [2026-02-05T08:15:57.814Z] Generated Impact Alert ALERT-1770279357813-k9spo for Surgeries
+LOG [2026-02-05T08:15:57.962Z] Staged snapshot for Treatments
+LOG [2026-02-05T08:15:57.963Z] Change detection result for Treatments: { objectTypeName: 'Treatments',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'Treatments',
@@ -101,7 +101,7 @@ LOG [2026-02-04T10:22:12.467Z] Change detection result for Treatments: { objectT
         'treatment_name',
         'treatment_type_id' ],
      rowCount: 50,
-     timestamp: '2026-02-04T10:22:11.613Z',
+     timestamp: '2026-02-05T08:15:57.061Z',
      hash: '{"schema":["implant_type","surgery_name","surgical_method","treatment_name","treatment_type_id"],"rowCount":50}' },
   previousSnapshot: 
    { objectTypeName: 'Treatments',
@@ -118,10 +118,10 @@ LOG [2026-02-04T10:22:12.467Z] Change detection result for Treatments: { objectT
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T10:22:12.467Z] Creating Alert for Treatments. Impacted: 
-LOG [2026-02-04T10:22:12.468Z] Generated Impact Alert ALERT-1770200532467-mwhk7 for Treatments
-LOG [2026-02-04T10:22:12.671Z] Staged snapshot for PatientsSurgeries
-LOG [2026-02-04T10:22:12.672Z] Change detection result for PatientsSurgeries: { objectTypeName: 'PatientsSurgeries',
+LOG [2026-02-05T08:15:57.963Z] Creating Alert for Treatments. Impacted: 
+LOG [2026-02-05T08:15:57.964Z] Generated Impact Alert ALERT-1770279357963-q2vx2 for Treatments
+LOG [2026-02-05T08:15:58.214Z] Staged snapshot for PatientsSurgeries
+LOG [2026-02-05T08:15:58.215Z] Change detection result for PatientsSurgeries: { objectTypeName: 'PatientsSurgeries',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'PatientsSurgeries',
@@ -138,7 +138,7 @@ LOG [2026-02-04T10:22:12.672Z] Change detection result for PatientsSurgeries: { 
         'surgery_name',
         'treatment_type_id' ],
      rowCount: 82,
-     timestamp: '2026-02-04T10:22:11.613Z',
+     timestamp: '2026-02-05T08:15:57.061Z',
      hash: '{"schema":["age_group","comorbidities","condition","date","obfuscated_patient_name","patient_id","primary_key","surgery_date","surgery_id","surgery_name","treatment_type_id"],"rowCount":82}' },
   previousSnapshot: 
    { objectTypeName: 'PatientsSurgeries',
@@ -161,10 +161,10 @@ LOG [2026-02-04T10:22:12.672Z] Change detection result for PatientsSurgeries: { 
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T10:22:12.672Z] Creating Alert for PatientsSurgeries. Impacted: 
-LOG [2026-02-04T10:22:12.672Z] Generated Impact Alert ALERT-1770200532672-ekpy7 for PatientsSurgeries
-LOG [2026-02-04T10:22:12.871Z] Staged snapshot for TreatmentTypesCleaned
-LOG [2026-02-04T10:22:12.872Z] Change detection result for TreatmentTypesCleaned: { objectTypeName: 'TreatmentTypesCleaned',
+LOG [2026-02-05T08:15:58.215Z] Creating Alert for PatientsSurgeries. Impacted: 
+LOG [2026-02-05T08:15:58.215Z] Generated Impact Alert ALERT-1770279358215-86x4z for PatientsSurgeries
+LOG [2026-02-05T08:15:58.412Z] Staged snapshot for TreatmentTypesCleaned
+LOG [2026-02-05T08:15:58.412Z] Change detection result for TreatmentTypesCleaned: { objectTypeName: 'TreatmentTypesCleaned',
   changeType: 'SCHEMA_CHANGED',
   currentSnapshot: 
    { objectTypeName: 'TreatmentTypesCleaned',
@@ -176,7 +176,7 @@ LOG [2026-02-04T10:22:12.872Z] Change detection result for TreatmentTypesCleaned
         'treatment_name',
         'treatment_type_id' ],
      rowCount: 36,
-     timestamp: '2026-02-04T10:22:11.613Z',
+     timestamp: '2026-02-05T08:15:57.061Z',
      hash: '{"schema":["date","implant_type","surgery_name","surgical_method","treatment_name","treatment_type_id"],"rowCount":36}' },
   previousSnapshot: 
    { objectTypeName: 'TreatmentTypesCleaned',
@@ -194,5 +194,5 @@ LOG [2026-02-04T10:22:12.872Z] Change detection result for TreatmentTypesCleaned
         'treatment_type_id' ],
      removed: [ 'osp', 'primaryKeySupplier', 'typeId' ] },
   details: 'Schema changed' }
-LOG [2026-02-04T10:22:12.872Z] Creating Alert for TreatmentTypesCleaned. Impacted: Treatments
-LOG [2026-02-04T10:22:12.873Z] Generated Impact Alert ALERT-1770200532872-icw94 for TreatmentTypesCleaned
+LOG [2026-02-05T08:15:58.412Z] Creating Alert for TreatmentTypesCleaned. Impacted: Treatments
+LOG [2026-02-05T08:15:58.413Z] Generated Impact Alert ALERT-1770279358412-03huw for TreatmentTypesCleaned

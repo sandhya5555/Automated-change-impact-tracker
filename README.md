@@ -28,7 +28,7 @@ export class Change_detector_new {
     @Edits(ChangeSnapshot, ChangeAlertTable)
     @OntologyEditFunction()
     @Function()
-    public async monitorDatasetChanges(): Promise<void> {
+    public async monitorDatasetChanges_v2(): Promise<void> {
         const currentTime = new Date().toISOString();
 
         const monitoringConfig = [

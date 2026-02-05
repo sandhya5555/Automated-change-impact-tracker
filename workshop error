@@ -1,0 +1,32 @@
+{
+    "errorTitle": "Failed to apply changes due to a configuration issue",
+    "errorMessage": "This action would modify an object type or link type that does not have edits enabled.",
+    "additionalProperties": {
+        "parameters": [
+            {
+                "humanReadableLabel": "Entity Type RID",
+                "humanReadableValue": "ri.ontology.main.object-type.ea973c65-8ac0-4ef5-812b-6b8aa28fa781"
+            }
+        ],
+        "errorDetails": {
+            "errorCode": "INVALID_ARGUMENT",
+            "errorId": "1a6afa05-c00a-4a6d-b090-7a4da045d1a0",
+            "errorName": "Actions:ReadOnlyEntity"
+        },
+        "translationMethod": "frontend"
+    },
+    "errorFallback": {
+        "type": "STATUS",
+        "status": 400,
+        "body": {
+            "errorCode": "INVALID_ARGUMENT",
+            "errorName": "Actions:ReadOnlyEntity",
+            "errorInstanceId": "1a6afa05-c00a-4a6d-b090-7a4da045d1a0",
+            "parameters": {
+                "translationInfo_userMessage": "Failed to apply changes due to a configuration issue.",
+                "translationInfo_technicalMessage": "This action would modify an object type or link type that does not have edits enabled.",
+                "entityTypeRid": "ri.ontology.main.object-type.ea973c65-8ac0-4ef5-812b-6b8aa28fa781"
+            }
+        }
+    }
+}

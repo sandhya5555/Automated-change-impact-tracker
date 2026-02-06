@@ -152,7 +152,7 @@ export class Change_detector_new {
         ): Promise<void> {
         try {
             const snapshotId = `${objectTypeName}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-            
+            console.log(`Creating snapshot with ID: ${snapshotId}`);
             const newSnapshot = Objects.create().changeSnapshot(snapshotId);
             
             newSnapshot.objectTypeName = objectTypeName;
@@ -161,7 +161,13 @@ export class Change_detector_new {
             newSnapshot.timestamp = timestamp;
             newSnapshot.hash = hash;
 
-            console.log(`Staged snapshot for ${objectTypeName}`);
+            console.log(`Successfully staged snapshot for ${objectTypeName} with properties:`, {
+                objectTypeName,
+                schemaLength: schema.length,
+                rowCount,
+                timestamp,
+                hash
+            });
             
         } catch (error) {
             console.error(`Error saving snapshot for ${objectTypeName}:`, error);

@@ -1,0 +1,111 @@
+
+Based on your current position in Data Lineage and the available Foundry monitoring capabilities, here's what you need to update in your monitoring configuration:
+
+## Option 1: Individual Resource Monitoring (Higher Maintenance)
+
+If you're monitoring individual resources, **yes, you need to add the RID of each new downstream node** you discover:
+
+```typescript
+const monitoringConfig = [
+  {
+    rid: "ri.monocle.main.graph.f5bfa6c4-35bb-4b73-ae46-a20585863ddd", // Your current resource
+    name: "Source Resource",
+    // Add each discovered downstream RID individually
+    downstreamRids: [
+      "ri.foundry.main.dataset.discovered-dataset-1",
+      "ri.foundry.main.dataset.discovered-dataset-2",
+      "ri.foundry.main.dataset.discovered-dataset-3"
+      // Each new node requires manual addition
+    ]
+  }
+];
+```
+
+## Option 2: Scope-Based Monitoring (Recommended - Lower Maintenance)
+
+**Better approach**: Use Foundry's **Monitoring Views** with scope-based rules that automatically cover new resources [_iMbM]:
+
+### Set Up Project or Folder-Level Monitoring
+Instead of individual RIDs, configure monitoring at the **Project** or **Folder** level [_VmNz]:
+
+```typescript
+// Configure monitoring by scope instead of individual RIDs
+const scopeBasedMonitoring = {
+  // Monitor all datasets in specific projects
+  projectScopes: [
+    "ri.foundry.main.project.your-project-id",
+    "ri.foundry.main.project.downstream-project-id"
+  ],
+  // Monitor all datasets in specific folders
+  folderScopes: [
+    "ri.foundry.main.folder.critical-datasets-folder"
+  ]
+};
+```
+
+### Why This Reduces Manual Updates
+When you use scope-based monitoring rules, **new resources added to that scope are automatically covered** [_iMbM]. This means:
+- ✅ New datasets created in monitored projects = automatically monitored
+- ✅ New transformations added to monitored folders = automatically monitored  
+- ❌ No need to update configuration for each new downstream resource
+
+## What You DON'T Need to Specify
+
+You **do not need to explicitly mention when each node will be affected**. Instead:
+
+1. **Use Monitoring Rules**: Set up monitoring rules that trigger based on conditions (data freshness, build failures, etc.) [_VmNz]
+2. **Configure Alert Severity**: Set severity levels (low, medium, high) for different types of impacts [_VmNz]
+3. **Set Up Subscriptions**: Configure who gets notified when issues occur [_VmNz]
+
+## Recommended Configuration Update Process
+
+### Step 1: Identify Scope Boundaries
+From your current Data Lineage view:
+1. Note which **Projects** contain your downstream resources
+2. Identify **Folders** that group related datasets
+3. Look for patterns in resource organization
+
+### Step 2: Configure Scope-Based Monitoring
+Create monitoring views that cover [_VmNz]:
+- **Dataset monitoring** at Project or Folder level
+- **Object type monitoring** for ontology-connected resources  
+- **Schedule monitoring** for pipeline execution
+
+### Step 3: Set Impact-Based Alerts
+Configure monitoring rules for:
+- **Data freshness**: Alert when datasets aren't updated within expected timeframes
+- **Build failures**: Alert when transformations fail
+- **Schema changes**: Alert when data structure changes unexpectedly
+
+## Example Implementation
+
+```typescript
+// Instead of maintaining individual RIDs, monitor by scope
+const monitoringConfiguration = {
+  // Monitor all datasets in projects where your lineage extends
+  datasetMonitoring: {
+    scope: "Project", // or "Folder"
+    projects: ["critical-data-project", "analytics-project"],
+    rules: [
+      {
+        metric: "data_freshness",
+        threshold: "24_hours",
+        severity: "high"
+      },
+      {
+        metric: "build_success",
+        threshold: "failure",
+        severity: "medium"
+      }
+    ]
+  }
+};
+```
+
+## Key Advantage
+
+**Assumption**: You want to minimize ongoing maintenance while ensuring comprehensive monitoring coverage.
+
+With scope-based monitoring, when a developer creates a new dataset tomorrow that uses your current resource as input, **it will be automatically monitored** if it's created within your configured project/folder scopes [_iMbM]. No configuration updates required.
+
+This approach transforms your monitoring from "per-resource maintenance" to "scope boundary management" - significantly reducing the manual overhead you're concerned about.

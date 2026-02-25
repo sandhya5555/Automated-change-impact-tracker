@@ -24,15 +24,6 @@ Business Value
 •	Compliance support - Maintain audit trail of all dataset modifications
 
 
-Whats happening 
-1.	When I click on Run Snapshot tracker then monitorDatasetChanges_v2 gets triggered(just run in code repository doesn’t always give correct output). 
-2.	The current schema of all 6 datasets will be compared with the previous snapshot, the previous snapshot is saved in Change Snapshot Object. We can expect 3 different outputs - NO_CHANGE, SCHEMA_CHANGED, NEW_OBJECT_TYPE
-
-
-1.	Ontology driven
-Create a Ontology Object and Define a Link Type between all datsets
-2.	
-
 
 
 

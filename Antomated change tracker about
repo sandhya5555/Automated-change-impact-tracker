@@ -1,0 +1,45 @@
+Automated Change Impact Tracker in Foundry that monitors if any dataset changed in pipeline, analyzes downstream dependencies , and uses AIP to generate human-readable impact summaries, classify risk levels, and recommend next actions.
+Next Steps
+1.	Dataset Change Detection - Monitor for changes in datasets (schema, data volume, freshness, etc.).
+2.	Lineage & Dependency Analysis - Identify downstream dependencies of changed datasets
+3.	Impact Summary Generation
+4.	Risk Classification
+5.	Workshop Dashboard Visualization
+6.	Automation & Scheduling
+
+Aim:
+•	Automated dataset monitoring system that tracks changes in Foundry datasets
+•	Change detection capabilities: Row count changes, schema modifications, new datasets
+•	Impact analysis: Shows which downstream datasets are affected by changes
+•	Audit trail: Stores historical snapshots for comparison and compliance
+Technical Implementation
+•	Function-based monitoring using TypeScript in Foundry Code Repositories
+•	Action Type integration for executing change detection workflows
+•	Ontology objects (ChangeSnapshot) to store monitoring data persistently
+•	Automated comparison logic between current and previous dataset states
+Business Value
+•	Proactive change detection - Know immediately when critical datasets change
+•	Data quality assurance - Catch unexpected schema or data modifications
+•	Downstream impact visibility - Understand ripple effects of data changes
+•	Compliance support - Maintain audit trail of all dataset modifications
+
+
+Whats happening 
+1.	When I click on Run Snapshot tracker then monitorDatasetChanges_v2 gets triggered(just run in code repository doesn’t always give correct output). 
+2.	The current schema of all 6 datasets will be compared with the previous snapshot, the previous snapshot is saved in Change Snapshot Object. We can expect 3 different outputs - NO_CHANGE, SCHEMA_CHANGED, NEW_OBJECT_TYPE
+
+
+1.	Ontology driven
+Create a Ontology Object and Define a Link Type between all datsets
+2.	
+
+
+
+
+
+
+
+
+
+
+
